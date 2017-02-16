@@ -12,7 +12,8 @@
   <h1>Nous trouver</h1>
   
   <div id="map" style="width:400px;height:400px;background:yellow"></div>
-  
+  <canvas id="myCanvas" width="600" height="400"></canvas> 
+	
   <script>
   function myMap() {
     var mapOptions = {
@@ -37,6 +38,14 @@ alert(data.query.results.item.condition.lemp);
 });
 });
 	</script>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle="#A33CFF";
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+</script>
 <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyAd9epDHj1jRyIQOaFHtXM2DbDR5TgOO-c &callback=myMap"></script>
 </body>
 </html>             
